@@ -1,8 +1,16 @@
-import './style.css';
+import React from 'react'
+import Header from './Components/Header'
+import Main from './Components/Main'
+import Footer from './Components/Footer'
 
 function App() {
-  return (
-  );
+    return (
+        <div className="w-full">
+            <Header />
+            <Main />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

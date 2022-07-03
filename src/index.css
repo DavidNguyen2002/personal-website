@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.one-third::before {
+  content: '';
+  flex: 1;
+}
+
+.one-third::after {
+  content: '';
+  flex: 3;
+}
+
+/* Scrollbar settings */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Flip card for experience section */
+.flip-outer {
+  text-align: center;
+  perspective: 600px;  
+}
+.flip-card {
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.flip-outer:hover .flip-card {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  backface-visibility: hidden;  
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Header underlines */
+nav a {
+    display: inline-block;
+    position: relative;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
