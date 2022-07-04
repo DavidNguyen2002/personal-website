@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 .one-third::before {
   content: '';
   flex: 1;
@@ -39,19 +43,24 @@
 }
 .flip-card {
   transition: transform 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 .flip-outer:hover .flip-card {
   transform: rotateY(180deg);
-  transition: transform 0.3s;
+  -webkit-transform: rotateY(180deg);
+  -webkit-transition: transform 0.3s;
 }
 
 .flip-front, .flip-back {
   position: absolute;
   backface-visibility: hidden;  
+  -webkit-backface-visibility: hidden;  
 }
 .flip-back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 /* Header underlines */
@@ -76,4 +85,59 @@ nav a:after {
 nav a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.wrapper{
+  display: flex;
+}
+
+.wrapper .dynamic-txts{
+  height: 45px;
+  line-height: 45px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -135px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  line-height: 45px;
+}
+.dynamic-txts li span::after{
+  top: 0.25px;
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 110%;
+  width: 100%;
+  background: white;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(16) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100%);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
+and (not (-moz-appearance:none))
+{
+
+  .safari-only {
+      aspect-ratio: 1.1 / 1;
+  }
+
 }

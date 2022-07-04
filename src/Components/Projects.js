@@ -43,9 +43,9 @@ function Projects() {
 
     return (
         <section className="w-full bg-emerald-300 h-fit" id="projects">
-            <div className="flex flex-col items-center py-36 gap-20 h-fit">
+            <div className="flex flex-col items-center py-20 md:py-36 gap-20 h-fit">
                 <SectionHeader title="Projects" subtitle="Here are some of the projects that I’ve worked on that I am especially proud of!" />
-                <div className="flex flex-col w-4/5 h-fit lg:w-3/5 items-center gap-20">
+                <div className="flex flex-col w-5/6 h-fit custom-xl:w-3/5 items-center gap-12 lg:gap-20">
                     {projectElements}
                 </div>
             </div>

@@ -1,21 +1,38 @@
 import profile from '../Images/profile.jpg'
+import {nanoid} from 'nanoid'
 
 function Hero() {
+
+    const dynamicRoles = ['Software Engineer', 'Computer Science Student', 'Eager Learner']
+
+    const dynamicElements = dynamicRoles.map(role => {
+        return (
+            <li 
+                key={nanoid()}
+                className="font-bold font-mono custom-xl:text-4xl custom-lg:text-3xl md:text-2xl text-xl text-center md:text-left"
+            >
+                <span>{role}</span>
+            </li>
+        )
+    })
+
     return (
-        <section className="h-[52rem] w-full flex items-center justify-center">
-            <div className="h-3/5 w-4/5 lg:w-2/3 grid grid-cols-2">
+        <section className="h-fit w-full flex items-center justify-center py-20 md:py-36">
+            <div className="h-3/5 w-2/3 md:w-4/5 lg:w-2/3 md:grid md:grid-cols-2 flex flex-col items-center md:gap-0 gap-8">
                 <div className="flex flex-col one-third md:pt-0">
                     <div className="">
-                        <h1 className="font-bold text-2xl md:text-5xl lg:text-6xl xl:text-7xl">
+                        <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:text-left text-center">
                             Hello! I'm
                         </h1>
-                        <div className="flex flex-col gap-12">
-                            <h1 className="font-bold text-2xl md:text-5xl lg:text-6xl xl:text-7xl">
+                        <div className="flex flex-col gap-2 md:gap-12">
+                            <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center md:text-left">
                                 David Nguyen
                             </h1>
-                            <h2 className="font-bold text-xl md:text-3xl lg:text-4xl xl:text-5xl">
-                                Software Engineer
-                            </h2>
+                            <div className="wrapper">
+                                <ul className="dynamic-txts">
+                                    {dynamicElements}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
