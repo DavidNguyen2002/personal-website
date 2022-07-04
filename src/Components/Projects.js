@@ -25,8 +25,8 @@ function Projects() {
     }
 
     const website = {
-        name: "My Personal Website",
-        description: "My website that you are looking at right now! Built with React and Tailwind, this website features dynamic styling and composable elements.",
+        name: "My Website",
+        description: "The website that you are looking at right now! Built with React and Tailwind, this website features dynamic styling and composable elements.",
         tech: "React, Javascript, Tailwind",
         left: true,
         image: myWebsiteImage,
