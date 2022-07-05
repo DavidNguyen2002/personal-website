@@ -17,7 +17,7 @@ function About() {
                         </p>
 
                         <p className="text-center text-xl md:text-3xl max-w-5xl w-4/5 xl:w-full">
-                            As I begin to wrap up my final years at college, I'm excited to improve my skills and further my career as a software engineer.
+                            As I begin to wrap up my final years of college, I'm excited to improve my skills and further my career as a software engineer.
                         </p>
                     </div>
                 </div>
