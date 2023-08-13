@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.e1c3f5ee.css",
-    "main.js": "/static/js/main.9b2f0900.js",
+    "main.js": "/static/js/main.1506b992.js",
     "static/media/profile.jpg": "/static/media/profile.8f3438cd66c0495f453a.jpg",
     "static/media/personal-website.png": "/static/media/personal-website.86fce5aeea103cf70bc6.png",
+    "static/media/cbl.png": "/static/media/cbl.9dff6834543d7735e915.png",
+    "static/media/doordash.png": "/static/media/doordash.84eed3c6bf02698c560f.png",
     "static/media/quizzical-image.png": "/static/media/quizzical-image.88ecb639e30bc0355d4c.png",
-    "static/media/columbia.jpg": "/static/media/columbia.b3c620c65f8b11bbc695.jpg",
     "static/media/tenzies-screenshot.png": "/static/media/tenzies-screenshot.7edd07a902eb8e468418.png",
     "static/media/hamburger-menu.png": "/static/media/hamburger-menu.46723dd6327ddc8d113d.png",
-    "static/media/bizmiss.png": "/static/media/bizmiss.686e695cce70885469c6.png",
     "index.html": "/index.html",
     "main.e1c3f5ee.css.map": "/static/css/main.e1c3f5ee.css.map",
-    "main.9b2f0900.js.map": "/static/js/main.9b2f0900.js.map"
+    "main.1506b992.js.map": "/static/js/main.1506b992.js.map"
   },
   "entrypoints": [
     "static/css/main.e1c3f5ee.css",
-    "static/js/main.9b2f0900.js"
+    "static/js/main.1506b992.js"
   ]
 }
